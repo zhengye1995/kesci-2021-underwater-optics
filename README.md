@@ -158,14 +158,13 @@ ATSS在这个数据上不太work，但是还是作为了一个baseline
        
        最终符合官方要求格式的提交文件 testB.csv 位于 submit目录下
     
-## 模型训下载链接
-
-    我最终比赛提交的模型下载链接为：
-    [Google云盘](https://drive.google.com/file/d/18xS3F8msfTTED6-IwODlvFNFWs_fU7fz/view?usp=sharing)
-
+## 模型文件final-353579b9.pth下载链接
+   [Google云盘](https://drive.google.com/file/d/18xS3F8msfTTED6-IwODlvFNFWs_fU7fz/view?usp=sharing)
+   
 ## Reference
  + [2020 baseline by rill | 斩风](https://github.com/zhengye1995/underwater-object-detection)
  + [2020 Underwater_detection by Wakinguup](https://github.com/Wakinguup/Underwater_detection)
+ 
 
 ## Contact
 
