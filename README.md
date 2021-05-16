@@ -27,27 +27,27 @@ ATSS在这个数据上不太work，但是还是作为了一个baseline
 |模型|数据预处理|数据增强|anchor策略|TTA|后处理|testA线上分数|
 | ------------- |------------- | ------------- | ------------- | ------------- |------------- |------------- |
 |cascade dcn r50| 加入无目标图 |多尺度训练（1500-2000）+ 左右翻转|max_iou_assign anchor_scale=8|None|nms|0.52444688|
-|cascade dcn r50| 加入无目标图 |多尺度训练（1500-2000）+ 左右翻转|~~ATSS~~ anchor_scale=8|None|nms|0.5212299|
-|cascade dcn r50| 加入无目标图 |多尺度训练 （1500-2000）+ 左右翻转 + autoaug V1|ATSS anchor_scale=8|None|nms|0.53048|
-|cascade dcn r50| 加入无目标图 |多尺度训练 （1500-2000）+ 左右翻转 + label smooth|ATSS anchor_scale=8|None|nms|0.52353581|
-|cascade dcn r50| 加入无目标图 |多尺度训练 （1500-2000）+ 左右翻转 + 运动模糊 |ATSS anchor_scale=8|None|nms|0.52745559|
-|cascade dcn r50| 加入无目标图 |多尺度训练 （1500-2000）+ 左右翻转 + ~~retinex~~ |ATSS anchor_scale=8|None|nms|0.27|
-|cascade dcn r50| 加入无目标图 |多尺度训练 （1500-2000）+ 左右翻转 + ~~mixup~~ |ATSS anchor_scale=8|None|nms|0.51952|
-|cascade dcn r101| 加入无目标图 |多尺度训练 （1500-2000）+ 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=8|None|nms|0.53326282|
-|Detectors 50| 加入无目标图 |多尺度训练 （1500-2000）+ 左右翻转 |max_iou_assign anchor_scale=8|None|nms|0.53825292|
-|Detectors 50| 加入无目标图 |多尺度训练（1500-2000） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=8|None|nms|0.54643025|
-|Detectors 50| 加入无目标图 |多尺度训练（1500-2000） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=8|3尺度+左右翻转|nms|0.55482894|
-|Detectors 50| 加入无目标图 |多尺度训练（1500-2000） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=8|3尺度+左右翻转|soft-nms|0.56624721|
-|Detectors 50| 去除无目标图 |多尺度训练（1500-2000） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=8|3尺度+左右翻转|soft-nms|0.56884578|
-|Detectors 50| 去除无目标图 |多尺度训练（704-1216） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=8|3尺度+左右翻转|soft-nms|0.56453794|
-|Detectors 50| 去除无目标图 |多尺度训练（704-1216） + 左右翻转 + ~~autoaug V0~~ + label smooth + 运动模糊|max_iou_assign anchor_scale=8|3尺度+左右翻转|soft-nms|0.56103191|
-|Detectors 50| 去除无目标图 |多尺度训练（704-1216） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=4|3尺度+左右翻转|soft-nms|0.5673893|
-|cascade resnest 101| 去除无目标图 |多尺度训练（704-1216） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=4|3尺度+左右翻转|soft-nms|0.53262004|
-|Detectors 50| 去除无目标图 + 过滤u开头扇贝类 |多尺度训练（704-1216） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=4|3尺度+左右翻转|soft-nms|0.56864865|
-|cascade x101 64x4d| 去除无目标图 + 过滤u开头扇贝类 |多尺度训练（704-1216） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=4|3尺度+左右翻转|soft-nms|0.5557|
-|Detectors 50| 去除无目标图 + 过滤u开头扇贝类 |多尺度训练（704-1216） + 左右翻转 + autoaug V1 + label smooth + 运动模糊 + ~~instance boost~~|max_iou_assign anchor_scale=4|3尺度+左右翻转|soft-nms|0.55293613|
-|Detectors 50| 去除无目标图 + 过滤u开头扇贝类 |多尺度训练（704-1216） + 左右翻转 + label smooth + 运动模糊  |max_iou_assign anchor_scale=4|3尺度+左右翻转|soft-nms|0.55283078|
-|Detectors 50| 去除无目标图 + 过滤u开头扇贝类 |多尺度训练（704-1216） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=4|3尺度+左右翻转|soft-nms + max_per_img 300|0.56927166|
+|cascade dcn r50| 加入无目标图 |多尺度训练（1500-2000）+ 左右翻转| <b>~~ATSS~~</b> anchor_scale=8|None|nms|0.5212299|
+|cascade dcn r50| 加入无目标图 |多尺度训练 （1500-2000）+ 左右翻转 + <b>autoaug V1</b>|ATSS anchor_scale=8|None|nms|0.53048|
+|cascade dcn r50| 加入无目标图 |多尺度训练 （1500-2000）+ 左右翻转 + <b>label smooth</b>|ATSS anchor_scale=8|None|nms|0.52353581|
+|cascade dcn r50| 加入无目标图 |多尺度训练 （1500-2000）+ 左右翻转 + <b>运动模糊</b> |ATSS anchor_scale=8|None|nms|0.52745559|
+|cascade dcn r50| 加入无目标图 |多尺度训练 （1500-2000）+ 左右翻转 + <b>~~retinex~~</b> |ATSS anchor_scale=8|None|nms|0.27|
+|cascade dcn r50| 加入无目标图 |多尺度训练 （1500-2000）+ 左右翻转 + <b>~~mixup~~</b> |ATSS anchor_scale=8|None|nms|0.51952|
+|<b>cascade dcn r101</b>| 加入无目标图 |多尺度训练 （1500-2000）+ 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=8|None|nms|0.53326282|
+|<b>Detectors 50</b>| 加入无目标图 |多尺度训练 （1500-2000）+ 左右翻转 |max_iou_assign anchor_scale=8|None|nms|0.53825292|
+|Detectors 50| 加入无目标图 |多尺度训练（1500-2000） + <b>左右翻转 + autoaug V1 + label smooth + 运动模糊</b>|max_iou_assign anchor_scale=8|None|nms|0.54643025|
+|Detectors 50| 加入无目标图 |多尺度训练（1500-2000） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=8|<b>3尺度+左右翻转</b>|nms|0.55482894|
+|Detectors 50| 加入无目标图 |多尺度训练（1500-2000） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=8|3尺度+左右翻转|<b>soft-nms</b>|0.56624721|
+|Detectors 50| <b>去除无目标图</b> |多尺度训练（1500-2000） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=8|3尺度+左右翻转|soft-nms|0.56884578|
+|Detectors 50| 去除无目标图 |<b>多尺度训练（704-1216）</b> + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=8|3尺度+左右翻转|soft-nms|0.56453794|
+|Detectors 50| 去除无目标图 |多尺度训练（704-1216） + 左右翻转 + <b>~~autoaug V0~~</b> + label smooth + 运动模糊|max_iou_assign anchor_scale=8|3尺度+左右翻转|soft-nms|0.56103191|
+|Detectors 50| 去除无目标图 |多尺度训练（704-1216） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign <b>anchor_scale=4</b>|3尺度+左右翻转|soft-nms|0.5673893|
+|<b>cascade resnest 101</b>| 去除无目标图 |多尺度训练（704-1216） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=4|3尺度+左右翻转|soft-nms|0.53262004|
+|Detectors 50| 去除无目标图 + <b>过滤u开头扇贝类</b> |多尺度训练（704-1216） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=4|3尺度+左右翻转|soft-nms|0.56864865|
+|<b>cascade x101 64x4d</b>| 去除无目标图 + 过滤u开头扇贝类 |多尺度训练（704-1216） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=4|3尺度+左右翻转|soft-nms|0.5557|
+|Detectors 50| 去除无目标图 + 过滤u开头扇贝类 |多尺度训练（704-1216） + 左右翻转 + autoaug V1 + label smooth + 运动模糊 + <b>~~instance boost~~</b>|max_iou_assign anchor_scale=4|3尺度+左右翻转|soft-nms|0.55293613|
+|Detectors 50| 去除无目标图 + 过滤u开头扇贝类 |多尺度训练（704-1216） + 左右翻转 + label smooth + 运动模糊 + <b>去除autoaug</b> |max_iou_assign anchor_scale=4|3尺度+左右翻转|soft-nms|0.55283078|
+|Detectors 50| 去除无目标图 + 过滤u开头扇贝类 |多尺度训练（704-1216） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=4|3尺度+左右翻转|soft-nms + <b>max_per_img 300</b>|0.56927166|
 
 ## 代码环境及依赖
 
