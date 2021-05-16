@@ -16,7 +16,7 @@
    + tta:
        1. 三尺度 
        2. 左右翻转
-   + post process: soft nms & max_per_img 200
+   + post process: soft nms & max_per_img 300
    
 ## 实验记录
 
