@@ -90,7 +90,7 @@ ATSS在这个数据上不太work，但是还是作为了一个baseline
 
   - 官方提供的是VOC格式的xml类型label文件，个人习惯使用COCO格式用于训练，所以进行格式转换
   
-  - 使用 tools/process_data/xmltococo_filter.py 将label文件转换为COCO格式，新的label文件 train.json 会保存在 data/train/annotations 目录下 （这一步会同时进行扇贝类的数据清洗）
+  - 使用 tools/process_data/xmltococo_filter.py 将label文件转换为COCO格式，新的label文件 train_filter_old_scallop.json 会保存在 data/train/annotations 目录下 （这一步会同时进行扇贝类的数据清洗）
 
   - 为了方便测试，我们对test数据也生成一个伪标签文件,运行 tools/process_data/generate_testA_json.py 生成 testA.json, 伪标签文件会保存在data/train/annotations 目录下 （testB同理）
 
