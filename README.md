@@ -22,7 +22,7 @@
 
 ATSS在这个数据上不太work，但是还是作为了一个baseline
 
-加~~删除线~~为不work的实验
+加~~删除线~~为不work的实验， 粗体为当次实验控制变量变化的内容
 
 |模型|数据预处理|数据增强|anchor策略|TTA|后处理|testA线上分数|
 | ------------- |------------- | ------------- | ------------- | ------------- |------------- |------------- |
@@ -46,7 +46,7 @@ ATSS在这个数据上不太work，但是还是作为了一个baseline
 |Detectors 50| 去除无目标图 + <b>过滤u开头扇贝类</b> |多尺度训练（704-1216） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=4|3尺度+左右翻转|soft-nms|0.56864865|
 |<b>cascade x101 64x4d</b>| 去除无目标图 + 过滤u开头扇贝类 |多尺度训练（704-1216） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=4|3尺度+左右翻转|soft-nms|0.5557|
 |Detectors 50| 去除无目标图 + 过滤u开头扇贝类 |多尺度训练（704-1216） + 左右翻转 + autoaug V1 + label smooth + 运动模糊 + <b>~~instance boost~~</b>|max_iou_assign anchor_scale=4|3尺度+左右翻转|soft-nms|0.55293613|
-|Detectors 50| 去除无目标图 + 过滤u开头扇贝类 |多尺度训练（704-1216） + 左右翻转 + label smooth + 运动模糊 + <b>去除autoaug</b> |max_iou_assign anchor_scale=4|3尺度+左右翻转|soft-nms|0.55283078|
+|Detectors 50| 去除无目标图 + 过滤u开头扇贝类 |多尺度训练（704-1216） + 左右翻转 + label smooth + 运动模糊 + <b>~~去除autoaug~~</b> |max_iou_assign anchor_scale=4|3尺度+左右翻转|soft-nms|0.55283078|
 |Detectors 50| 去除无目标图 + 过滤u开头扇贝类 |多尺度训练（704-1216） + 左右翻转 + autoaug V1 + label smooth + 运动模糊|max_iou_assign anchor_scale=4|3尺度+左右翻转|soft-nms + <b>max_per_img 300</b>|0.56927166|
 
 ## 代码环境及依赖
